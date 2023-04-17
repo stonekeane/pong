@@ -34,7 +34,7 @@ right_paddle.direction = "stop"
 ball = t.Turtle()
 ball.speed(0)
 ball.shape("circle")
-ball.color("yellow")
+ball.color("white")
 ball.penup()
 ball.shapesize(stretch_wid=1, stretch_len=1)
 ball.goto(5, 5)
@@ -122,6 +122,17 @@ while True:
         pen.clear()
         score_string = "player A: {}             player B: {} ".format(playerAscore, playerBscore)
         pen.write(score_string,align="center",font=("Monaco", 24, "normal"))
+
+    if playerBscore  == 2 or playerAscore == 2:
+        pen.clear()
+        ball.hideturtle()
+        pen.sety(5)
+        if playerAscore > playerBscore:
+            pen.write("Player A Wins! ", align="center", font=("Monaco", 24, "normal"))
+        else:
+            pen.write("Player B Wins! ", align="center", font=("Monaco", 24, "normal"))
+
+
 
 
 
