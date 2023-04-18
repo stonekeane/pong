@@ -123,9 +123,11 @@ while True:
         score_string = "player A: {}             player B: {} ".format(playerAscore, playerBscore)
         pen.write(score_string,align="center",font=("Monaco", 24, "normal"))
 
-    if playerBscore  == 2 or playerAscore == 2:
+    if playerBscore  >= 15 or playerAscore >= 15:
         pen.clear()
         ball.hideturtle()
+        left_paddle.hideturtle()
+        right_paddle.hideturtle()
         pen.sety(5)
         if playerAscore > playerBscore:
             pen.write("Player A Wins! ", align="center", font=("Monaco", 24, "normal"))
